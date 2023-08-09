@@ -22,7 +22,13 @@ import random
 # - Abschlussausgabe
 
 # TODO: später über input() Benutzer nach den Zahlen fragen
-tipp = [8, 23, 17, 34, 3, 9]
+# tipp = [8, 23, 17, 34, 3, 9]
+# input() erzeugt immer einen String
+benutzereingabe = input("Bitte gib sechs Zahlen zwischen 1 und 49 ein, jeweils durch ein Leerzeichen getrennt.\n")
+# mit split() können wir einen String in seine Bestandteile zerlegen 
+# und die einzelnen Elemente in eine Liste packen
+# als Argument kann split() das Trennzeichen (Separator) übergeben werden
+tipp = benutzereingabe.split(" ")    # erzeugt die Liste tipp mit den einzelnen Zahlen als Elemente
 
 zufallszahlen = []
 # Nutzung der anonymen Variable _, 
