@@ -12,6 +12,14 @@ while number <= 10:
     # number = number + 1
     number += 1      # increment, in anderen Sprachen z.B. number++
 
+### While-Loop mit else
+print("\nWhile-Loop mit else")
+number = 1
+while number <= 10:
+    print(number)
+    number += 1      # increment, in anderen Sprachen z.B. number++
+else:
+    print("Es wurden {0} Elemente ausgegeben".format(number - 1))
 
 ### break
 print("\nWhile-Loop mit break")
