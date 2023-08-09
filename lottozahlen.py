@@ -28,14 +28,34 @@ zufallszahlen = []
 # Nutzung der anonymen Variable _, 
 # da wir dies nur für die Definition brauchen, 
 # aber nicht in unserem Code nutzen
+# TODO: es kann passieren, dass wir zwei gleiche Zahlen der List hinzufügen -> korrigieren
 for _ in range(6):       
     zufallszahlen.append(random.randint(1, 49))
 
+# Listen sorieren
+tipp.sort()
+zufallszahlen.sort()
+
+print("Tipp:", tipp)
 print("Zufallszahlen:", zufallszahlen)
 
+# nur zum Testen, später entfernen!
+# zufallszahlen = [8, 21, 17, 33, 2, 9]
 
+gewinnzahlen = []
 
+# Für jedes Element von Tipp prüfen, ob es in der List zufallszahlen enthalten ist
+for zahl in tipp:    
+    if zahl in zufallszahlen:
+        gewinnzahlen.append(zahl)
 
+# Anzahl der richtigen Zahlen ermitteln
+anzahl_richtige = len(gewinnzahlen)
+
+print("Du hast folgende richtige Zahlen: {0} aus der Ziehung {1}".format(gewinnzahlen, zufallszahlen))
+print(f"Du hast folgende {anzahl_richtige} richtige Zahlen: {gewinnzahlen} aus der Ziehung {zufallszahlen}")    # F-String, der konfortabelste Weg
+
+# - Das Ergebnis wird ausgegeben: "Du hast drei Richtige: 8, 23, 17"
 
 
 
