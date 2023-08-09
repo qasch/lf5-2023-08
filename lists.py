@@ -112,5 +112,15 @@ print(animals)
 animals.insert(1, "Vogel")
 print(animals)
 
+## Element in Liste ersetzen
+animals[1] = "Schlange"
+print(animals)
 
+# Anzahl der Elemente der Liste ausgeben
+print(len(animals))
+
+# enumerate()
+# Alle Elemente mit zugehörigem Index ausgeben lassen
+for index, animal in enumerate(animals):
+    print(index, animal)
 
